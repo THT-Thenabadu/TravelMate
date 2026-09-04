@@ -2,6 +2,12 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
+const destinations = require('./src/data/destinations');
+
+const {
+  rankDestinations
+} = require('./src/services/itineraryService');
+
 const app = express();
 
 // Middleware
@@ -11,6 +17,20 @@ app.use(express.json());
 // Health check route — confirms the server is alive
 app.get('/', (req, res) => {
   res.json({ message: 'TravelMate backend is running' });
+});
+
+app.get('/test-itinerary', (req, res) => {
+  const userInterests = [
+    "nature",
+    "adventure"
+  ];
+
+  const rankedDestinations = rankDestinations(
+    destinations,
+    userInterests
+  );
+
+  res.json(rankedDestinations);
 });
 
 // --- Routes ---
