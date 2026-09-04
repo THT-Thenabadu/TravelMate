@@ -253,12 +253,12 @@ during software development.
 
 ## 👥 Team Members and Contributions
 
-| Team Member | Student ID | Contribution |
-|---|---|---|
-| Member 1 | ITXXXXXXXX | Traveller Preference Form and Interest Selection |
-| Member 2 | ITXXXXXXXX | Form Validation and Destination/Transport Data |
-| Member 3 | ITXXXXXXXX | Rule-Based Travel Planning and Route Logic |
-| Member 4 | ITXXXXXXXX | Results Interface, Integration and Responsive Design |
+| Team Member | Student ID | 
+|---|---|
+| Thenabandu T.H | IT24103690 | 
+| Nawarathna N.H.D.S | IT24103140 | 
+| De Silva S.N.D.D | IT24103527 | 
+| Sumanasekara H.T.S.L | IT24102378 |
 
 All team members contribute code to the shared GitHub repository and
 participate in testing, integration, and final project preparation.
