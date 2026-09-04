@@ -1,0 +1,138 @@
+/* ─────────────────────────────────────────────
+   Results page — main layout & header
+   ───────────────────────────────────────────── */
+
+/* Overall page wrapper */
+.results-page {
+  min-height: 100vh;
+  background: #f8f8f8;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ── PAGE HEADER ── */
+.results-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e4e7;
+  padding: 48px 24px 40px;
+  text-align: center;
+  position: relative;
+}
+
+/* Orange top-bar accent */
+.results-header__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #F97316;
+  border-radius: 0 0 4px 4px;
+}
+
+.results-header__title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.results-header__subtitle {
+  font-size: 17px;
+  color: #6b6375;
+  margin: 0;
+}
+
+/* ── MAIN CONTENT AREA ── */
+.results-main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ── SECTION HEADING ── */
+.section-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #F97316;
+  display: inline-block;
+}
+
+/* ── ITINERARY TIMELINE ── */
+.itinerary-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.itinerary-timeline__entry {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── ACTION BUTTONS ── */
+.results-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  min-width: 160px;
+}
+
+.btn--primary {
+  background: #F97316;
+  color: #ffffff;
+  border-color: #F97316;
+}
+
+.btn--primary:hover {
+  background: #ea6c10;
+  border-color: #ea6c10;
+}
+
+.btn--secondary {
+  background: #ffffff;
+  color: #F97316;
+  border-color: #F97316;
+}
+
+.btn--secondary:hover {
+  background: #fff5ee;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .results-header__title {
+    font-size: 28px;
+  }
+  .results-header {
+    padding: 40px 16px 32px;
+  }
+  .results-main {
+    padding: 28px 16px 48px;
+    gap: 36px;
+  }
+  .btn {
+    width: 100%;
+    min-width: unset;
+  }
+  .results-actions {
+    flex-direction: column;
+  }
+}
