@@ -1,0 +1,109 @@
+.form-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 5% 80px;
+  font-family: 'Inter', sans-serif;
+  color: #141414;
+}
+
+.back-link {
+  background: none;
+  border: none;
+  color: #6E6A66;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.form-page h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 8px;
+}
+
+.form-intro {
+  color: #6E6A66;
+  margin-bottom: 32px;
+}
+
+.field {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.field input[type='text'],
+.field input[type='number'] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #DAD7D3;
+  border-radius: 8px;
+  font-size: 1rem; /* keep at 1rem minimum — smaller triggers unwanted zoom on iOS */
+  font-family: inherit;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #FF5E1A;
+}
+
+.error {
+  color: #B8340A;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.checkbox-item,
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1.5px solid #DAD7D3;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  width: 100%;
+  background: #FF5E1A;
+  color: #FFFFFF;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.btn-primary:hover {
+  background: #B8340A;
+}
+
+@media (max-width: 480px) {
+  .form-page {
+    padding: 30px 6% 60px;
+  }
+
+  .checkbox-item,
+  .radio-item {
+    flex: 1 1 calc(50% - 12px);
+    justify-content: center;
+    text-align: center;
+  }
+}

@@ -12,6 +12,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px 6%;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .logo {
@@ -91,7 +93,6 @@
 
 .btn-primary:hover {
   background: #B8340A;
-  color:#141414;
 }
 
 .btn-text {
@@ -186,6 +187,7 @@
   color: #6E6A66;
   font-size: 0.85rem;
   border-top: 1px solid #EAE8E5;
+  word-break: break-word;
 }
 
 /* Mobile */
@@ -204,6 +206,17 @@
     max-width: 220px;
   }
 
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .hero-actions .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
   .manifesto {
     flex-direction: column;
     padding: 50px 5%;
@@ -215,5 +228,12 @@
 
   .steps-row {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .landing-nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
