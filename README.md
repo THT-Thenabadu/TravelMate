@@ -178,6 +178,16 @@ itinerary.
 ### Deployment
 
 - Vercel
+
+### Running the backend
+
+1. Copy `Backend/.env.example` to `Backend/.env`.
+2. Set `DATABASE_URL` to your local MongoDB or MongoDB Atlas connection string.
+3. Start the API from the repository root with `npm --prefix Backend run dev`.
+4. Start the frontend with `npm --prefix Frontend run dev`.
+
+The preference form sends data to `POST http://localhost:5000/api/preferences`.
+Set `Frontend/.env` with `VITE_API_URL` if the backend runs at another URL.
 ---
 
 ## 📁 Project Structure

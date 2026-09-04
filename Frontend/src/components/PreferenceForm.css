@@ -108,6 +108,16 @@
   background: #B8340A;
 }
 
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.submit-error {
+  display: block;
+  text-align: center;
+}
+
 @media (max-width: 480px) {
   .form-page {
     padding: 30px 6% 60px;

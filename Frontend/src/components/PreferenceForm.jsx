@@ -4,7 +4,7 @@ import './PreferenceForm.css';
 const INTEREST_OPTIONS = ['Nature', 'Culture', 'Adventure', 'Food', 'Nightlife'];
 const TRAVEL_STYLES = ['Backpacker', 'Mid-range', 'Luxury'];
 
-function PreferenceForm({ onSubmit, onBack }) {
+function PreferenceForm({ onSubmit, onBack, isSubmitting, submitError }) {
   const [formData, setFormData] = useState({
     days: '',
     budget: '',
@@ -142,9 +142,10 @@ function PreferenceForm({ onSubmit, onBack }) {
           </div>
         </div>
 
-        <button type="submit" className="btn-primary">
-          Generate my itinerary
+        <button type="submit" className="btn-primary" disabled={isSubmitting}>
+          {isSubmitting ? 'Saving your preferences...' : 'Generate my itinerary'}
         </button>
+        {submitError && <span className="error submit-error">{submitError}</span>}
       </form>
     </div>
   );

@@ -1,5 +1,8 @@
 const express = require('express');
 const cors = require('cors');
+const connectDB = require('./src/config/db');
+const preferenceRoutes = require('./src/routes/preferenceRoutes');
+const destinationRoutes = require('./src/routes/destinations');
 require('dotenv').config();
 
 const app = express();
@@ -14,14 +17,8 @@ app.get('/', (req, res) => {
 });
 
 // --- Routes ---
-// Uncomment and create these files as your team builds them out:
-// const destinationRoutes = require('./routes/destinations');
-// const itineraryRoutes = require('./routes/itinerary');
-// const transportRoutes = require('./routes/transport');
-
-// app.use('/api/destinations', destinationRoutes);
-// app.use('/api/itinerary', itineraryRoutes);
-// app.use('/api/transport', transportRoutes);
+app.use('/api/preferences', preferenceRoutes);
+app.use('/api/destinations', destinationRoutes);
 
 // --- Basic error handling for unmatched routes ---
 app.use((req, res) => {
@@ -36,6 +33,11 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+const startServer = async () => {
+  await connectDB();
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+};
+
+startServer();
