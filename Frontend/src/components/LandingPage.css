@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap');
 
 .landing {
+  width: 100%;
+  min-height: 100vh;
   font-family: 'Inter', sans-serif;
   color: #141414;
   background: #FFFFFF;
@@ -20,6 +22,7 @@
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: 1.3rem;
+  color: #141414;
 }
 
 .logo-dot {
@@ -29,6 +32,7 @@
 .nav-cta {
   background: transparent;
   border: 1.5px solid #141414;
+  color: #141414;
   padding: 8px 18px;
   border-radius: 999px;
   font-size: 0.85rem;
@@ -62,6 +66,7 @@
   font-size: clamp(2.2rem, 5vw, 3.4rem);
   line-height: 1.1;
   margin: 0 0 20px;
+  color: #141414;
 }
 
 .hero-sub {
@@ -154,6 +159,7 @@
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   margin-bottom: 40px;
+  color: #141414;
 }
 
 .steps-row {
